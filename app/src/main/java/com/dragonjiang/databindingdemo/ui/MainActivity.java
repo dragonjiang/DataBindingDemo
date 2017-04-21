@@ -27,7 +27,12 @@ public class MainActivity extends AppCompatActivity {
         binding.recycleView.setAdapter(new RecycleAdapter(Arrays.asList(
                 new RcvItemModel("01BindingData", BindingDataActivity.class),
                 new RcvItemModel("02EventHandling", EventHandlingActivity.class),
-                new RcvItemModel("03LayoutDetails", LayoutDetailsActivity.class)
+                new RcvItemModel("03LayoutDetails", LayoutDetailsActivity.class),
+                new RcvItemModel("04ObservableObject", ObservableObjectActivity.class),
+                new RcvItemModel("05ObservableField", ObservableFieldActivity.class),
+                new RcvItemModel("06ObservableCollection", ObservableCollectionActivity.class),
+                new RcvItemModel("07ViewStub", ViewStubActivity.class),
+                new RcvItemModel("08Attribute", AttributeActivity.class)
         )));
     }
 }

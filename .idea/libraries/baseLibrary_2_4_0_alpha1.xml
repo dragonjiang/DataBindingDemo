@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="baseLibrary-2.4.0-alpha1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/2.4.0-alpha1/d2a5e8953b932d973f99b20d7e48ff7f7098157a/baseLibrary-2.4.0-alpha1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/2.4.0-alpha1/f7d618ba39005a4a1ac5b66a12617359de253626/baseLibrary-2.4.0-alpha1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -22,10 +23,6 @@
             type="UserModel" />
 
         <variable
-            name="index"
-            type="int" />
-
-        <variable
             name="userList"
             type="List&lt;UserModel&gt;" />
 
@@ -41,6 +38,15 @@
             name="key"
             type="String" />
 
+        <variable
+            name="index"
+            type="int" />
+
+        <variable
+            name="large"
+            type="Boolean" />
+
+
     </data>
 
     <LinearLayout
@@ -49,6 +55,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{user.firstName + ` ` + user.lastName}" />
@@ -62,21 +69,41 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{userList[index].toString()}" />
+            android:text="@{`userList: ` + userList[index].toString()}" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{sparse[index]}" />
+            android:text="@{`sparse: ` + sparse[index]}" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{map[key]}" />
+            android:text="@{`map: ` + map[key] + ' ' +map[`key2`]}" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{StringUtil.capitalize(user.lastName)}" />
+            android:text="@{`static method: ` + StringUtil.capitalize(user.lastName)}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`stringFormat: ` + @string/nameFormat(user.firstName, user.lastName)}"
+            android:textSize="@{large ? @dimen/large_text : @dimen/small_text}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`plural: `+@plurals/orange(index)}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`Null Coalescing Operator: `+user.firstName ?? user.lastName}" />
+
+        <include
+            layout="@layout/include"
+            bind:user="@{user}" />
     </LinearLayout>
 </layout>

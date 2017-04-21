@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dragonjiang.databindingdemo">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +21,11 @@
         <activity android:name=".ui.BindingDataActivity" />
         <activity android:name=".ui.EventHandlingActivity" />
         <activity android:name=".ui.LayoutDetailsActivity" />
+        <activity android:name=".ui.ObservableObjectActivity" />
+        <activity android:name=".ui.ObservableFieldActivity" />
+        <activity android:name=".ui.ObservableCollectionActivity" />
+        <activity android:name=".ui.ViewStubActivity" />
+        <activity android:name=".ui.AttributeActivity" />
     </application>
 
 </manifest>

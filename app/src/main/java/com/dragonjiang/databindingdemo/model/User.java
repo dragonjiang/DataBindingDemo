@@ -8,6 +8,7 @@ public class User {
     public final String firstName;
     public final String lastName;
     public boolean isAdult;
+    public String avatar;
 
     public User(String firstName, String lastName) {
         this.firstName = firstName;
@@ -28,6 +29,14 @@ public class User {
 
     public void setAdult(boolean adult) {
         isAdult = adult;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     @Override
