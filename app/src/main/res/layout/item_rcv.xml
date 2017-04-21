@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.dragonjiang.databindingdemo.model.RcvItemModel" />
+
+        <variable
+            name="handler"
+            type="com.dragonjiang.databindingdemo.handler.RcvItemEventHandler" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:onClick="@{(view)->handler.onClickEvent(view, model)}"
+            android:text="@{model.name}" />
+    </RelativeLayout>
+</layout>
