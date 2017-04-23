@@ -63,7 +63,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="成年人"
+            android:text="@{user.firstName}"
             android:visibility="@{user.isAdult ? View.VISIBLE : View.GONE}" />
 
         <TextView
